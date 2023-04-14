@@ -65,111 +65,60 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit" id="submit">
-              Search
+            <button class="btn btn-outline-success" type="submit" id="submit" class="">
+              Search 
             </button>
           </form>
         </div>
       </div>
     </nav>
     <h1 class="Weather">Weather for <span id="cityName"></span></h1>
-    <div class="container">
-      <main>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Temperature</h4>
-              </div>
-              
-              
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  <span id="temp2"></span><small class="text-body-secondary fw-light">°C</small>
-                </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Temperature is <span id="temp"></span></li>
-                  <li>Minimum Temperature is <span id="min_temp"></span></li>
-                  <li>Maximum Temperature is <span id="max_temp"></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Humidity Info</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  <span id="humidity2"></span><small class="text-body-secondary fw-light">%</small>
-                </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Cloud Picture is <span id="cloud_pct"></span></li>
-                  <li>Feels Like <span id="feels_like"></span></li>
-                  <li>Humidity is <span id="humidity"></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Wind Speed</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  <span id="wind_speed2"></span><small class="text-body-secondary fw-light">Km/h</small>
-                </h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>Wind speed is <span id="wind_speed"></span></li>
-                  <li>Wind Degrees is <span id="wind_degrees"></span></li>
-                  <li>Sunrise Time is <span id="sunrise"></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="tud">
+  
+    <div class="box">
+      <h2 id="t">Temperature</h2>
+      
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          <span id="temp2"></span><small class="text-body-secondary fw-light">°C <img id="temperature-image" src="cloud-image.jpg" alt="Cloud Image" class="sun">  
+          </small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Temperature is <span id="temp"></span></li>
+          <li>Minimum Temperature is <span id="min_temp"></span></li>
+          <li>Maximum Temperature is <span id="max_temp"></span></li></ul>
+          <ul class="feel">
+          <li>Feels Like <span id="feels_like"></span>°C ,<p><span id="cloudpercentage-image"> </span> sky</p> </li>
+        </ul>
+        <ul class="ok">
+          <li>Cloud Percentage is <span id="cloud_pct"></span>%</li>
+         
+          <li>Humidity is <span id="humidity"></span>%</li>
+          <li class="gb">Wind speed is <span id="wind_speed"></span> Km/h</li>
+          </ul>
+        </div>
+    </div>
+ 
+</div>
+    </div>
+  </div>
 
-
-
-        
-          <div id="weather-icon"></div>
+    <video id="bg-video" autoplay loop muted>
+      <source src="tyl.mp4" type="video/mp4">
+      <!-- You can add additional video formats here for cross-browser compatibility -->
+    </video>
+    
 
 
 
 
 
 
+   
+    
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-       
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

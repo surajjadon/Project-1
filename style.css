@@ -1,3 +1,80 @@
 .Weather {
   text-align: center;
 }
+.sun {
+  width: 50px;
+  height: 50px;
+}
+.tud {
+  position: relative;
+}
+.box {
+  width: 500px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  border-radius: 20px;
+  z-index: 999;
+  position: absolute; /* change position from fixed to absolute */
+  top: 50%; /* set top position to 50% of the parent element */
+  left: 50%; /* set left position to 50% of the parent element */
+  transform: translate(
+    -160%,
+    -10%
+  ); /* center the box horizontally and vertically */
+}
+
+#t {
+  color: rgb(17, 1, 1);
+  text-align: center;
+  border-bottom: 2px solid rgb(116, 112, 112);
+  border-top: 2px solid rgb(116, 112, 112);
+  border-right: 2px solid rgb(116, 112, 112);
+  border-left: 2px solid rgb(116, 112, 112);
+  padding: 10px;
+  background-color: rgb(226, 226, 220);
+  border-radius: 20px;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+}
+
+.ok {
+  border-top: 4px solid rgb(60, 58, 58);
+  padding-top: 10px;
+  list-style: none;
+}
+
+ul.ok {
+  position: relative;
+}
+
+ul li.gb {
+  position: absolute;
+  bottom: 0;
+  left: 72%;
+  transform: translateX(-50%);
+}
+.feel {
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+}
