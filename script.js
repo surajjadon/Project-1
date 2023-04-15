@@ -71,4 +71,4 @@ submit.addEventListener("click", (e) => {
   e.preventDefault();
   getWeather(city.value);
 });
-getWeather("Varanasi");
+getWeather("srinagar");

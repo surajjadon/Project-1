@@ -107,8 +107,49 @@
       <source src="tyl.mp4" type="video/mp4">
       <!-- You can add additional video formats here for cross-browser compatibility -->
     </video>
-    
 
+
+    <h1 >5-Day Weather Forecast</h1>
+    <table >
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temperature (K)</th>
+          <th>Humidity (%)</th>
+        </tr>
+      </thead>
+      <tbody id="forecast-table"></tbody>
+    </table>
+    </div>
+
+    <script>
+      const apiKey = '4ffdc76c26504b2eb6aa980212990a3e';
+      const city = 'Gwalior';
+
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const forecastTable = document.getElementById('forecast-table');
+
+          for (let i = 0; i < data.list.length; i += 8) {
+            const date = new Date(data.list[i].dt_txt);
+            const temp = data.list[i].main.temp;
+            const humidity = data.list[i].main.humidity;
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${date.toLocaleDateString()}</td>
+              <td id="temp1">${temp}</td>
+              <td id="humidity1">${humidity}</td>
+            `;
+            forecastTable.appendChild(row);
+          }
+        })
+        .catch(error => console.error(error));
+    </script>
+  
 
 
 

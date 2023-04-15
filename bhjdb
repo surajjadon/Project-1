@@ -1,0 +1,74 @@
+<div class="tud">
+  <div class="box1">
+    <h2 id="t">Last Seven Days Temperature</h2>
+    <div class="allbox">
+      <div class="day12">
+        <p class="weather" id="day1"></p>
+        <p class="minValues" id="day1Min">ghrh</p>
+        <p class="maxValues" id="day1Max">ghrh</p>
+      </div>
+      <div class="day21">
+        <p class="weather" id="day1"></p>
+        <p class="minValues" id="day1Min">ghrh</p>
+        <p class="maxValues" id="day1Max">ghrh</p>
+      </div>
+      <div class="day34">
+        <p class="weather" id="day1"></p>
+        <p class="minValues" id="day1Min">ghrh</p>
+        <p class="maxValues" id="day1Max">ghrh</p>
+      </div>
+      <div class="day43">
+        <p class="weather" id="day1"></p>
+        <p class="minValues" id="day1Min">ghrh</p>
+        <p class="maxValues" id="day1Max">ghrh</p>
+      </div>
+      <div class="day55">
+        <p class="weather" id="day1"></p>
+        <p class="minValues" id="day1Min">ghrh</p>
+        <p class="maxValues" id="day1Max">ghrh</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+const options = { method: "GET", headers: { "X-RapidAPI-Key":
+"bacea70ba9msh3321d340be99861p1f289cjsn997d5584ed6e", "X-RapidAPI-Host":
+"weather-by-api-ninjas.p.rapidapi.com", }, }; const temperatureImage =
+document.getElementById("temperature-image"); function
+updateTemperatureImage(temperature) { if (temperature >= 0 && cloud_pct <= 10) {
+temperatureImage.src = "sun.png"; temperatureImage.alt = "Sun Image"; } else if
+(temperature > 10 && temperature <= 50) { temperatureImage.src = "s1.png";
+temperatureImage.alt = "Cloud Image"; } else if (temperature > 50 && temperature
+<= 90) { temperatureImage.src = "untitled.png"; temperatureImage.alt = "Cloud
+Image"; } else if (temperature > 90) { temperatureImage.src = "ice.png";
+temperatureImage.alt = "Sun Image"; } console.log("Image src:",
+temperatureImage.src); } const cloudpercentageImage =
+document.getElementById("cloudpercentage-image"); function
+updateCloudpercentageImage(cloud_pct) { let weatherText = ""; if (cloud_pct >= 0
+&& cloud_pct <= 10) { weatherText = "Clear"; } else if (cloud_pct > 10 &&
+cloud_pct <= 50) { weatherText = "Partly cloudy"; } else if (cloud_pct > 50 &&
+cloud_pct <= 90) { weatherText = "Mostly cloudy"; } else if (cloud_pct > 90) {
+weatherText = "Overcast"; } cloudpercentageImage.textContent = weatherText;
+console.log("Weather status:", weatherText); } const getWeather = (city) => {
+cityName.innerHTML = city; fetch(
+"https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city, options
+) .then((response) => response.json()) .then((response) => {
+console.log(response); updateTemperatureImage(response.cloud_pct);
+updateCloudpercentageImage(response.cloud_pct); cloud_pct.innerHTML =
+response.cloud_pct; temp.innerHTML = response.temp; temp2.innerHTML =
+response.temp; feels_like.innerHTML = response.feels_like; humidity.innerHTML =
+response.humidity; min_temp.innerHTML = response.min_temp; max_temp.innerHTML =
+response.max_temp; wind_speed.innerHTML = response.wind_speed; }) .catch((err)
+=> console.error(err)); fetch(
+"https://api.openweathermap.org/data/2.5/forecast?q=" + city +
+"&appid=4ffdc76c26504b2eb6aa980212990a3e" ) .then((response) => response.json())
+.then((response) => { const forecastData = response.list.reduce((acc, data) => {
+const date = data.dt_txt.split(" ")[0]; if (!acc[date]) { acc[date] = { date,
+temps: [], humidity: [], description: [], // add other metrics you want to track
+here }; } acc[date].temps.push(data.main.temp);
+acc[date].humidity.push(data.main.humidity);
+acc[date].description.push(data.weather[0].description); // add other metrics
+you want to track here return acc; }, {}); // now you can use forecastData to
+display the forecast for each day console.log(forecastData); }) .catch((error)
+=> console.error(error)); }; submit.addEventListener("click", (e) => {
+e.preventDefault(); getWeather(city.value); }); getWeather("Varanasi");
