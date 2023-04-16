@@ -72,3 +72,19 @@ you want to track here return acc; }, {}); // now you can use forecastData to
 display the forecast for each day console.log(forecastData); }) .catch((error)
 => console.error(error)); }; submit.addEventListener("click", (e) => {
 e.preventDefault(); getWeather(city.value); }); getWeather("Varanasi");
+
+
+
+
+
+
+
+
+
+
+var xi = document.getElementById("city");
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  getWeather(xi.value);
+  getWeather2(xi.value);
+});

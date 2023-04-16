@@ -1,7 +1,7 @@
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "bacea70ba9msh3321d340be99861p1f289cjsn997d5584ed6e",
+    "X-RapidAPI-Key": "426c82b41emshca1912a772c38d9p1b4b41jsnaf965b0fc446",
     "X-RapidAPI-Host": "weather-by-api-ninjas.p.rapidapi.com",
   },
 };
@@ -67,8 +67,45 @@ const getWeather = (city) => {
     .catch((err) => console.error(err));
 };
 
+const getWeather2 = (city) => {
+  const apiKey = "4ffdc76c26504b2eb6aa980212990a3e";
+
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const forecastTable = document.getElementById("forecast-table");
+      forecastTable.innerHTML = "";
+
+      for (let i = 0; i < data.list.length; i += 8) {
+        const date = new Date(data.list[i].dt_txt);
+        const temp = data.list[i].main.temp;
+        const humidity = data.list[i].main.humidity;
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `-
+        <td>${date.toLocaleDateString()}</td>
+        <td id="temp1">${temp}</td>
+        <td id="humidity1">${humidity}</td>
+        `;
+
+        forecastTable.appendChild(row);
+      }
+    })
+    .catch((error) => console.error(error));
+};
+const submit = document.getElementById("submit");
+const cityInput = document.getElementById("city");
+
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  getWeather(city.value);
+  const city = cityInput.value.trim();
+  if (city) {
+    getWeather(city);
+    getWeather2(city);
+  }
 });
-getWeather("srinagar");
+getWeather("Varanasi");
+getWeather2("Varanasi");

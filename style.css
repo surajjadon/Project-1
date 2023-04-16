@@ -1,5 +1,10 @@
 .Weather {
   text-align: center;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: 70px;
 }
 .sun {
   width: 50px;
@@ -12,6 +17,7 @@
   width: 500px;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.5);
+
   border: 2px solid black;
   padding: 20px;
   color: white;
@@ -19,13 +25,12 @@
   margin: 40px;
   border-radius: 20px;
   z-index: 999;
-  position: absolute; /* change position from fixed to absolute */
+  position: absolute;
   top: 50%; /* set top position to 50% of the parent element */
   left: 50%; /* set left position to 50% of the parent element */
-  transform: translate(
-    -160%,
-    -10%
-  ); /* center the box horizontally and vertically */
+  transform: translate(-160%, -12%);
+  /* change position from fixed to absolute */
+  /* center the box horizontally and vertically */
 }
 
 #t {
@@ -38,23 +43,11 @@
   padding: 10px;
   background-color: rgb(226, 226, 220);
   border-radius: 20px;
+  font-weight: bold;
 }
 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
-}
-#bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background-size: cover;
 }
 
 .ok {
@@ -77,4 +70,55 @@ ul li.gb {
   list-style: none;
   font-weight: bold;
   font-size: 20px;
+}
+
+.tys {
+  border: 2px solid black;
+  width: 800px;
+  height: 350px;
+  margin: 0 auto;
+  left: 40%;
+  top: 170%;
+  position: absolute;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dayfor {
+  color: rgb(17, 1, 1);
+  text-align: center;
+  border-bottom: 2px solid rgb(116, 112, 112);
+  border-top: 1px solid rgb(116, 112, 112);
+  border-right: 1px solid rgb(116, 112, 112);
+  border-left: 2px solid rgb(116, 112, 112);
+  padding: 5px;
+  background-color: rgb(226, 226, 220);
+  border-radius: 20px;
+  top: 4%;
+  left: 16%;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
+}
+
+.tr {
+  top: 20%;
+  position: absolute;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(96, 22, 223);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(226, 43, 223);
+}
+.we {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgb(180, 43, 226);
+  opacity: 0.7;
+  font-size: 25px;
 }
