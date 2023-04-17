@@ -11,37 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        background: linear-gradient(
-          90deg,
-          #00aaff,
-          #0066ff,
-          #0033ff,
-          #5500ff,
-          #8800cc,
-          #b300b3,
-          #cc0099,
-          #e6007f,
-          #ff0055
-        );
-
-        background-size: 400% 400%;
-        animation: gradient 8s ease infinite;
-      }
-
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-    </style>
+    
     <style>
       nav {
         background: linear-gradient(135deg,    #76b8e8,
@@ -177,15 +147,30 @@
     <h2 class="dayfor">5-Day Weather Forecast</h2>
     <table >
       <thead>
-        <tr class="tr">
-          <th>Date</th>
-          <th>Temperature (K)</th>
-          <th>Humidity (%)</th>
-        </tr>
+        
+          <th id="da" >Date</th>
+          <th id="tem">Temperature (K)</th>
+          <th id="hum">Humidity (%)</th>
+       
       </thead>
       <tbody id="forecast-table"></tbody>
       </table>
     </div>
+
+    <div class="Dwf">
+      
+      <table >
+        <thead>
+          <tr >
+            
+          </tr>
+        </thead>
+       
+        </table>
+      </div>
+    </div>
+   
+
 
 
 
@@ -205,6 +190,68 @@
       </div>
     </div>
 
+    <h2 class="latest">Latest News</h2>
+
+    <div class="news-box">
+      
+      <ol id="news-list">
+        <li></li>
+        <li style="color: rgb(247, 242, 248); font-size: 25px">
+           • Several Northeast States Battle Above 40°C Mercuries, Water Crisis;
+          Similar Conditions to Persist for 4-5 Days
+          <a
+            href="https://weather.com/en-IN/india/news/news/2023-04-15-several-ne-states-battle-above-40degc-temperatures-water-crisis">
+            Know more.....</a>
+         
+        </li>
+        <li></li>
+        <li style="color: rgb(247, 242, 248); font-size: 25px">
+           ••• Weekend Weather (April 15-16): Heatwaves to Scorch West Bengal,
+          Andhra; Thunderstorms Over Kerala, Telangana
+          <a
+            href="https://weather.com/en-IN/india/news/news/2023-04-15-weekend-weather-april-15-16-heatwaves-west-bengal-andhra-odisha"
+          >
+            Know more.....
+          </a>
+        </li>
+        <li></li>
+        <li style="color: rgb(247, 242, 248); font-size: 25px ">
+          ••• Parts of Telangana, Including Hyderabad, Witness Moderate Rains and
+          Thunderstorms on Friday
+          <a
+            href="https://weather.com/en-IN/india/news/news/2023-04-14-moderate-rains-thunderstorms-in-hyderabad-telangana-on-friday"
+          >
+            Know more.....</a
+          >
+        </li>
+        <li style="color: rgb(247, 242, 248); font-size: 25px">
+          •••Several Northeast States Battle Above 40°C Mercuries, Water Crisis;
+         Similar Conditions to Persist for 4-5 Days
+         <a
+           href="https://weather.com/en-IN/india/news/news/2023-04-15-several-ne-states-battle-above-40degc-temperatures-water-crisis">
+           Know more.....</a>
+        
+       </li>
+       <li style="color: rgb(247, 242, 248); font-size: 25px"> •••Schools Timings in Patna Changed Due to Rising Temperatures
+        <a
+           href="https://weather.com/en-IN/india/news/news/2023-04-14-schools-timings-in-patna-changed-due-to-rising-temperatures">
+           Know more.....</a>
+       </li>
+       <li style="color: rgb(247, 242, 248); font-size: 25px"> •••Heavy rain Such a guideline is also applicable on all the educational institutions, including coaching centers, colleges and other private institutions
+        <a
+           href="https://weather.com/en-IN/india/news/news/2023-02-14-schools-timings-in-patna-changed-due-to-rising-temperatures">
+           Know more.....</a>
+       </li>
+       
+       
+      
+ 
+
+
+      </ol>
+   
+    </div>
+
   
  
       
@@ -216,6 +263,57 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+
+    <div class="feedback-button">
+      <a href="#feedback-form">Feedback</a>
+    </div>
+
+
+
+
+
+
+    <!-- Feedback form -->
+    <div id="feedback-form" class="feedback-form">
+      <h2>Feedback Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="message">Any Suggestions:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <video id="video-background" autoplay muted loop>
+      <source src="tyl.mp4" type="video/mp4">
+    </video>
+
+    <script>
+ 
+      const feedbackButton = document.querySelector(".feedback-button a");
+      const feedbackForm = document.getElementById("feedback-form");
+
+    
+      feedbackButton.addEventListener("click", () => {
+        feedbackForm.style.display = "block";
+      });
+
+      
+      const feedbackFormBody = document.getElementById("feedback-form-body");
+
+      feedbackFormBody.addEventListener("submit", (event) => {
+        event.preventDefault(); 
+        feedbackFormBody.reset();
+        feedbackForm.style.display = "none";
+      });
+    </script>
+
     
   </body>
 </html>

@@ -85,11 +85,11 @@ const getWeather2 = (city) => {
 
         const row = document.createElement("tr");
 
-        row.innerHTML = `-
-        <td>${date.toLocaleDateString()}</td>
-        <td id="temp1">${temp}</td>
-        <td id="humidity1">${humidity}</td>
-        `;
+        row.innerHTML = `
+        <td class="date1">${date.toLocaleDateString()}</td>
+        <td class="temp1">${temp}</td>
+        <td class="humidity1">${humidity}</td>
+      `;
 
         forecastTable.appendChild(row);
       }
