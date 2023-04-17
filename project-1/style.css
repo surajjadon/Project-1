@@ -1,0 +1,204 @@
+.Weather {
+  text-align: center;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: 70px;
+}
+.sun {
+  width: 50px;
+  height: 50px;
+}
+.tud {
+  position: relative;
+}
+.box {
+  width: 500px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border: 2px solid black;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  border-radius: 20px;
+  z-index: 999;
+  position: absolute;
+  top: 50%; /* set top position to 50% of the parent element */
+  left: 50%; /* set left position to 50% of the parent element */
+  transform: translate(-160%, -12%);
+  /* change position from fixed to absolute */
+  /* center the box horizontally and vertically */
+}
+
+#t {
+  color: rgb(17, 1, 1);
+  text-align: center;
+  border-bottom: 2px solid rgb(116, 112, 112);
+  border-top: 2px solid rgb(116, 112, 112);
+  border-right: 2px solid rgb(116, 112, 112);
+  border-left: 2px solid rgb(116, 112, 112);
+  padding: 10px;
+  background-color: rgb(226, 226, 220);
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+body {
+  position: relative;
+}
+
+.ok {
+  border-top: 4px solid rgb(60, 58, 58);
+  padding-top: 10px;
+  list-style: none;
+}
+
+ul.ok {
+  position: relative;
+}
+
+ul li.gb {
+  position: absolute;
+  bottom: 0;
+  left: 72%;
+  transform: translateX(-50%);
+}
+.feel {
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tys {
+  border: 2px solid black;
+  width: 800px;
+  height: 350px;
+  margin: 0 auto;
+  left: 40%;
+  top: 170%;
+  position: absolute;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dayfor {
+  color: rgb(17, 1, 1);
+  text-align: center;
+  border-bottom: 2px solid rgb(116, 112, 112);
+  border-top: 1px solid rgb(116, 112, 112);
+  border-right: 1px solid rgb(116, 112, 112);
+  border-left: 2px solid rgb(116, 112, 112);
+  padding: 5px;
+  background-color: rgb(226, 226, 220);
+  border-radius: 20px;
+  top: 4%;
+  left: 16%;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
+}
+
+.tr {
+  top: 20%;
+  position: absolute;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(96, 22, 223);
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(226, 43, 223);
+}
+.we {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgb(180, 43, 226);
+  opacity: 0.7;
+  font-size: 25px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.popup p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.popup ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popup ul li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.popup .actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.popup .actions a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup .actions .agree-btn {
+  background-color: #00aaff;
+  margin-right: 10px;
+}
+
+.popup .actions .agree-btn:hover {
+  background-color: #0066ff;
+}
+
+.popup .actions .disagree-btn {
+  background-color: #ff0055;
+}
+
+.popup .actions .disagree-btn:hover {
+  background-color: #e6007f;
+}
+.overlay.show {
+  display: block;
+}
