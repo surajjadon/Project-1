@@ -24,7 +24,7 @@ Step 4:Explore Other Locations: If you'd like to view the weather information fo
 * If you have any suggestion you can give us by submiting the feedback form.
 
 #Deployment Link
-https://surajjadon.github.io/Project-1/index2.html
+https://surajjadon.github.io/Project-1/#
 
 # A small video of demonstration
 https://drive.google.com/file/d/1j-zujkI1w0iGOt3sYgQRq0JOtSBziamr/view?usp=sharing
