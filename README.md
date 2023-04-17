@@ -23,5 +23,8 @@ Step 4:Explore Other Locations: If you'd like to view the weather information fo
 * Our site also contain a quiz about weather you can attempt that quiz.
 * If you have any suggestion you can give us by submiting the feedback form.
 
+#Deployment Link
+https://project-1-tmef-knj0rl4br-surajjadon.vercel.app/#
 
 # A small video of demonstration
+https://drive.google.com/file/d/1j-zujkI1w0iGOt3sYgQRq0JOtSBziamr/view?usp=sharing
