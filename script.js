@@ -109,3 +109,19 @@ submit.addEventListener("click", (e) => {
 });
 getWeather("Varanasi");
 getWeather2("Varanasi");
+
+const overlay = document.querySelector(".overlay");
+const agreeBtn = document.querySelector(".agree-btn");
+const disagreeBtn = document.querySelector(".disagree-btn");
+
+agreeBtn.addEventListener("click", function () {
+  agreeBtn.addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+});
+
+disagreeBtn.addEventListener("click", function () {
+  console.log("Disagree button clicked");
+  window.location.href = "https://www.google.com";
+  // Add code to handle the disagree action here
+});
