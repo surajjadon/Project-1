@@ -17,20 +17,16 @@
   width: 500px;
   height: 400px;
   background-color: rgba(0, 0, 0, 0.5);
-
   border: 2px solid black;
   padding: 20px;
   color: white;
   font-family: Arial, sans-serif;
-  margin: 40px;
+  margin: 10px;
   border-radius: 20px;
   z-index: 999;
   position: absolute;
   top: 50%; /* set top position to 50% of the parent element */
-  left: 50%; /* set left position to 50% of the parent element */
-  transform: translate(-160%, -12%);
-  /* change position from fixed to absolute */
-  /* center the box horizontally and vertically */
+  left: 0%;
 }
 
 #t {
